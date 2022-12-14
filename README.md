@@ -19,12 +19,41 @@ __exit__::__exit__
 
 2. 輸入英文名稱
 
-3. 輸入訊息，按下 Enter 離開
+3. 輸入訊息，按下 Enter 傳送
 
 4. 輸入 `__exit__` 離開聊天室
 
-## Bug
+## Bugs
 
 使用非正常方式離開聊天室會導致伺服器端錯誤。
 
+---
 
+# A simple chatroom with UDP socket
+
+## Message format: `command::message'
+
+```
+# Set new user
+__newUser__::username
+
+# Send messages
+__message__::[username]: message
+
+# Leaving the chatroom server
+__exit__::__exit__
+```
+
+## Steps
+
+1. Entering the server side IP
+
+2. Entering the username
+
+3. Entering the messages
+
+4. Entering `__exit__` will leave the chatroom
+
+## Bugs
+
+If the client leave the chatroom by ways except entering `__exit__`, the server will occur exception.
