@@ -31,7 +31,7 @@ __exit__::__exit__
 
 # A simple chatroom with UDP socket
 
-## Message format: `command::message'
+## Message format: `command::message`
 
 ```
 # Set new user
